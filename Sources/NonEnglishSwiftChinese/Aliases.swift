@@ -39,3 +39,4 @@ typealias 三维轴 = (x: CGFloat, y: CGFloat, z: CGFloat)
 typealias 单位点 = UnitPoint
 typealias CG点 = CGPoint
 typealias 路径 = Path
+typealias 描边样式 = StrokeStyle

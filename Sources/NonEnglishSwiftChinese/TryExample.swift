@@ -9,23 +9,24 @@ import SwiftUI
 // MARK: - Chinese usage sample
 
 struct 例子视图: 中文视图 {
+    @State private var scale: CGFloat = 1.0
 
     var 视图主体: some 视图 {
-        路径 { 径 in
-            // 起点
-            径.移动到(CG点(x: 20, y: 20))
-            // 终点
-            径.移动到(CG点(x: 200, y: 120))
+        VStack {
+            Circle()
+                .fill(Color.blue)
+                .frame(width: 100, height: 100)
+                .scaleEffect(scale)
+                .动画(.缓入缓出(持续时间: 1.0), 值: scale)
+
+            Button("Animate") {
+                scale = scale == 1.0 ? 1.8 : 1.0
+            }
+            .padding()
         }
-        .stroke(.blue, style: StrokeStyle(lineWidth: 3, lineCap: .round))
-        .frame(width: 220, height: 140)
-        .background(Color(.systemGray6))
-        .cornerRadius(12)
-        .padding()
     }
 }
 
 #Preview {
     例子视图()
 }
-

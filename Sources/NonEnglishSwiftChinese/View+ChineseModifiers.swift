@@ -96,6 +96,10 @@ extension View {
     func 标识<标识符: Hashable>(_ 标识符: 标识符) -> some View {
         id(标识符)
     }
+
+    func 动画<值: Equatable>(_ 动画: Animation?, 值: 值) -> some View {
+        animation(动画, value: 值)
+    }
 }
 
 extension Image {
@@ -126,6 +130,10 @@ extension AnyTransition {
 extension Shape {
     func 描边(颜色: Color, 线宽: CGFloat) -> some View {
         stroke(颜色, lineWidth: 线宽)
+    }
+
+    func 描边(颜色: Color, 样式: 描边样式) -> some View {
+        stroke(颜色, style: 样式)
     }
 
     func 填充(_ 颜色: Color) -> some View {

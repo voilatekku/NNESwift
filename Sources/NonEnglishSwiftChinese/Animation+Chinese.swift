@@ -1,6 +1,6 @@
 import SwiftUI
 
-func 动画<Result>(_ 动画: Animation? = .default, 执行 body: () -> Result) -> Result {
+func 带有动画<Result>(_ 动画: Animation? = .default, 执行 body: () -> Result) -> Result {
     withAnimation(动画, body)
 }
 
