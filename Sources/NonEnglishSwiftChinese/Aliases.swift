@@ -37,3 +37,5 @@ typealias 分隔线 = Divider
 typealias 矩形 = Rectangle
 typealias 三维轴 = (x: CGFloat, y: CGFloat, z: CGFloat)
 typealias 单位点 = UnitPoint
+typealias CG点 = CGPoint
+typealias 路径 = Path

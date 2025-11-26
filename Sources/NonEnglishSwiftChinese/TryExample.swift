@@ -11,11 +11,11 @@ import SwiftUI
 struct 例子视图: 中文视图 {
 
     var 视图主体: some 视图 {
-        Path { path in
+        路径 { 径 in
             // 起点
-            path.move(to: CGPoint(x: 20, y: 20))
+            径.移动到(CG点(x: 20, y: 20))
             // 终点
-            path.addLine(to: CGPoint(x: 200, y: 120))
+            径.移动到(CG点(x: 200, y: 120))
         }
         .stroke(.blue, style: StrokeStyle(lineWidth: 3, lineCap: .round))
         .frame(width: 220, height: 140)
