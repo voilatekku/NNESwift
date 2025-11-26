@@ -40,40 +40,8 @@ VStack {
 
 See `Sources/NonEnglishSwiftChinese/Examples.swift` for a full example.
 
-## Quick Start
-You can add **NNESwift** to any SwiftUI project using **Swift Package Manager (SPM)**.
-
-### **1. Add the package in Xcode**
-
-1. Open your project in **Xcode**
-2. Go to **File → Add Packages…**
-3. Enter the NNESwift repository URL:
-
-```
-https://github.com/voilatekku/NNESwift
-```
-
-4. Select the package products you want (e.g., `NonEnglishSwiftChinese`)
-5. Add the package to your app target
-
----
-
-### **2. Import the localized module**
-
-```swift
-import NonEnglishSwiftChinese
-import SwiftUI
-```
-
----
-
-### **3. Start writing SwiftUI in your language**
-
-That’s it — Xcode will resolve and build the package automatically.
-You can now mix localized identifiers with normal SwiftUI whenever you want.
-
 <details>
-  <summary>**Quick Explanations for English Speakers**</summary>
+  <summary><strong>Quick Explanations for English Speakers</strong></summary>
   
 Have you ever imagined Swift code looking like this?
 
@@ -114,6 +82,38 @@ VStack {
 
 Not so fun to read even if you know some Spanish, right? This is the difficult reality facing Non-Native English Speaker (NNES) developers everyday.
 </details>
+
+## Quick Start
+You can add **NNESwift** to any SwiftUI project using **Swift Package Manager (SPM)**.
+
+### **1. Add the package in Xcode**
+
+1. Open your project in **Xcode**
+2. Go to **File → Add Packages…**
+3. Enter the NNESwift repository URL:
+
+```
+https://github.com/voilatekku/NNESwift
+```
+
+4. Select the package products you want (e.g., `NonEnglishSwiftChinese`)
+5. Add the package to your app target
+
+---
+
+### **2. Import the localized module**
+
+```swift
+import NonEnglishSwiftChinese
+import SwiftUI
+```
+
+---
+
+### **3. Start writing SwiftUI in your language**
+
+That’s it — Xcode will resolve and build the package automatically.
+You can now mix localized identifiers with normal SwiftUI whenever you want.
 
 Introducing **NNESwift** (Non-Native English Speaker Swift), an experimental Swift package that lets you write SwiftUI code using the natural language you’re most comfortable with — starting with Chinese, with more languages (like Japanese) planned.
 
