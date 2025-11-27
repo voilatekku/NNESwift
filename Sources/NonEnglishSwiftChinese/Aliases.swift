@@ -18,6 +18,7 @@ typealias 文本 = Text
 typealias 图像 = Image
 typealias 按钮 = Button
 typealias 滑块 = Slider
+typealias 列表 = List
 
 // MARK: - Primitive types
 

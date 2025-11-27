@@ -41,6 +41,10 @@ extension View {
         background(内容)
     }
 
+    func 导航标题(_ 标题: String) -> some View {
+        navigationTitle(标题)
+    }
+
     func 圆角半径(_ 半径: CGFloat, 抗锯齿: Bool = true) -> some View {
         cornerRadius(半径, antialiased: 抗锯齿)
     }
