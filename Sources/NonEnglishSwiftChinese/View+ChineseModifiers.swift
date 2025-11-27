@@ -139,6 +139,10 @@ extension Shape {
     func 填充(_ 颜色: Color) -> some View {
         fill(颜色)
     }
+
+    func 裁剪(起点: CGFloat, 终点: CGFloat) -> some Shape {
+        trim(from: 起点, to: 终点)
+    }
 }
 
 extension PrimitiveButtonStyle where Self == BorderlessButtonStyle {

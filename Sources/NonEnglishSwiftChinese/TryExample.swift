@@ -9,21 +9,18 @@ import SwiftUI
 // MARK: - Chinese usage sample
 
 struct 例子视图: 中文视图 {
-    @State private var scale: CGFloat = 1.0
+    @State private var isAnimating = false
 
     var 视图主体: some 视图 {
-        VStack {
-            Circle()
-                .fill(Color.blue)
-                .frame(width: 100, height: 100)
-                .scaleEffect(scale)
-                .动画(.缓入缓出(持续时间: 1.0), 值: scale)
-
-            Button("Animate") {
-                scale = scale == 1.0 ? 1.8 : 1.0
+        Circle()
+            .裁剪(起点: 0, 终点: 0.75)
+            .stroke(Color.blue, lineWidth: 4)
+            .frame(width: 40, height: 40)
+            .rotationEffect(.degrees(isAnimating ? 360 : 0))
+            .animation(.linear(duration: 1).repeatForever(autoreverses: false), value: isAnimating)
+            .onAppear {
+                isAnimating = true
             }
-            .padding()
-        }
     }
 }
 
