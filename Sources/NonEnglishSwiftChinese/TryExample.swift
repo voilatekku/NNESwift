@@ -9,18 +9,25 @@ import SwiftUI
 // MARK: - Chinese usage sample
 
 struct 例子视图: 中文视图 {
-    @State private var isAnimating = false
+    @State private var rotate = false
 
     var 视图主体: some 视图 {
-        Circle()
-            .裁剪(起点: 0, 终点: 0.75)
-            .stroke(Color.blue, lineWidth: 4)
-            .frame(width: 40, height: 40)
-            .rotationEffect(.degrees(isAnimating ? 360 : 0))
-            .animation(.linear(duration: 1).repeatForever(autoreverses: false), value: isAnimating)
-            .onAppear {
-                isAnimating = true
+        HStack(spacing: 8) {
+            ForEach(0..<3) { index in
+                Circle()
+                    .frame(width: 12, height: 12)
+                    .scaleEffect(rotate ? 1 : 0.5)
+                    .animation(
+                        .easeInOut(duration: 0.6)
+                            .repeatForever()
+                            .delay(Double(index) * 0.2),
+                        value: rotate
+                    )
             }
+        }
+        .onAppear {
+            rotate = true
+        }
     }
 }
 

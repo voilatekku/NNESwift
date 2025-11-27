@@ -38,4 +38,8 @@ extension Animation {
     static func 计时曲线(控制点1X: Double, 控制点1Y: Double, 控制点2X: Double, 控制点2Y: Double, 持续时间: Double) -> Animation {
         .timingCurve(控制点1X, 控制点1Y, 控制点2X, 控制点2Y, duration: 持续时间)
     }
+
+    func 无限重复(自动逆转: Bool = true) -> Animation {
+        repeatForever(autoreverses: 自动逆转)
+    }
 }
