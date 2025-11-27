@@ -42,4 +42,8 @@ extension Animation {
     func 无限重复(自动逆转: Bool = true) -> Animation {
         repeatForever(autoreverses: 自动逆转)
     }
+
+    func 延迟(_ 持续时间: Double) -> Animation {
+        delay(持续时间)
+    }
 }

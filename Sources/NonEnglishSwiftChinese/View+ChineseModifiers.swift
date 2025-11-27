@@ -77,6 +77,10 @@ extension View {
         scaledToFill()
     }
 
+    func 缩放(_ 比例: CGFloat, 锚点: UnitPoint = .center) -> some View {
+        scaleEffect(比例, anchor: 锚点)
+    }
+
     func 忽略安全区边缘(_ 边缘: Edge.Set) -> some View {
         edgesIgnoringSafeArea(边缘)
     }
@@ -134,6 +138,10 @@ extension Shape {
 
     func 描边(颜色: Color, 样式: 描边样式) -> some View {
         stroke(颜色, style: 样式)
+    }
+
+    func 描边<填充: ShapeStyle>(_ 填充: 填充, 样式: 描边样式) -> some View {
+        stroke(填充, style: 样式)
     }
 
     func 填充(_ 颜色: Color) -> some View {

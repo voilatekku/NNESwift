@@ -40,3 +40,5 @@ typealias 单位点 = UnitPoint
 typealias CG点 = CGPoint
 typealias 路径 = Path
 typealias 描边样式 = StrokeStyle
+typealias 渐变 = Gradient
+typealias 角度渐变 = AngularGradient
